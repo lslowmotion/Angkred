@@ -464,5 +464,4 @@
             <!-- /. PAGE INNER  -->
         </div>
         <!-- /. PAGE WRAPPER  -->
-    </div>
 <?php $this->load->view('footer')?>

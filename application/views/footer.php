@@ -1,3 +1,4 @@
+	</div>
 	<!-- /. WRAPPER  -->
 
     <div id="footer-sec">
