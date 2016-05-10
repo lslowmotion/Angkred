@@ -14,5 +14,7 @@
     <script src="<?php echo base_url();?>assets/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+    <!--Ranu Script-->
+    <script src="<?php echo base_url();?>assets/js/RanuScript.js"></script>
 </body>
 </html>
