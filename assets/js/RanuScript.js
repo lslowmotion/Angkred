@@ -22,4 +22,15 @@ function ajaxSearch(){
     }
 }
 
+function selectFormKumE(){
+    var value = $('#radio').val();
+    $.ajax({
+        type: 'POST',
+        url : base_url+"KumEControl/showKomponenKegiatan/",
+        data : {'id' : value},
+        success: function (data) {
+            $('#komponen_kegiatan').html(data);
+        }
+    });
+}
 

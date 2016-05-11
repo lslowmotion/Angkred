@@ -12,11 +12,7 @@ class SearchControl extends CI_Controller {
     public function autoComplete() {
         $search_data = $this->input->post('search_data');
         $query = $this->KumEModel->get_autoComplete($search_data);
-        foreach ($query->result() as $row){
-            ?>
-            <li><a href="<?php echo base_url();?>"><?php echo $row->nama?></a></li>                
-            <?php 
-        }
+        $query = $query->result();
     }
 
 }

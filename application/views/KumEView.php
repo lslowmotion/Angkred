@@ -6,10 +6,17 @@
         <!-- /. ROW  -->
         <div class="row">
             <div class="col-md-12">                     
-                <input name="search_data" id="search_data" type="text" onkeyup="ajaxSearch();">
-                <div id="suggestions">
-                    <div id="autoSuggestionsList"/>
+                <div class="form-group">
+                    <label>Kegiatan</label>
+                    <select class="form-control" id="radio" onclick="selectFormKumE();">
+                        <?php
+                        $i = 1;
+                        foreach($kum_e as $row){?>
+                        <option value="<?php echo $i;?>"><?php echo $i++.".&nbsp;".$row->nama;?></option>
+                        <?php }?>
+                    </select>
                 </div>
+                <div id="komponen_kegiatan"/>
             </div>
         </div>
     </div>
