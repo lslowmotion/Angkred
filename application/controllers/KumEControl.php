@@ -8,12 +8,14 @@ class KumEControl extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('KumEModel');
+        $this->load->library('session');
     }
 
     public function index() {
-        $search_data = $this->input->post('search_data');
-        $query = $this->KumEModel->get_autoComplete($search_data);
-        $data['kum_e'] =  $query->result();
+        if(!$this->session->userdata('is_login')){
+            redirect('/LoginControl/');
+        }
+        $data['kum_e'] =  $this->KumEModel->getTitleArray();
         $this->load->view('KumEView',$data);
     }
     
@@ -23,5 +25,4 @@ class KumEControl extends CI_Controller {
         $data['kum_e'] = $query->result();
         $this->load->view('KumE_Komponen_Kegiatan',$data);
     }
-
 }

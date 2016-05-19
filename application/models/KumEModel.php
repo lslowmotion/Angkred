@@ -26,17 +26,17 @@ class KumEModel extends CI_Model {
         );
         return $titleArray;
     }
-    
-    public function get_autoComplete($search_data){
+
+    public function get_autoComplete($search_data) {
         $this->db->select('nama');
-        $this->db->like('nama',$search_data);
-        return $this->db->get('kum_e',11);
+        $this->db->like('nama', $search_data);
+        return $this->db->get('kum_e', 11);
     }
-    
-    public function get_komponenKegiatan($id){
+
+    public function get_komponenKegiatan($id) {
         $this->db->select('*');
-        $this->db->where('id_kum',$id);
-        return $this->db->get('kegiatan');
+        $this->db->where('no', $id);
+        return $this->db->get('kum_e');
     }
 
 }

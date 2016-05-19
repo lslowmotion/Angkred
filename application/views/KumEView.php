@@ -12,7 +12,7 @@
                         <?php
                         $i = 1;
                         foreach($kum_e as $row){?>
-                        <option value="<?php echo $i;?>"><?php echo $i++.".&nbsp;".$row->nama;?></option>
+                        <option value="<?php echo $i;?>">E.<?php echo $i++.".&nbsp;".$row;?></option>
                         <?php }?>
                     </select>
                 </div>

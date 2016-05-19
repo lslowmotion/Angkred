@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" />
         <!-- FONTAWESOME STYLES-->
         <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- PAGE LEVEL STYLES -->
+        <link href="<?php echo base_url(); ?>assets/css/bootstrap-fileupload.min.css" rel="stylesheet" />
         <!--CUSTOM BASIC STYLES-->
         <link href="<?php echo base_url(); ?>assets/css/basic.css" rel="stylesheet" />
         <!--CUSTOM MAIN STYLES-->
@@ -38,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
                     <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
-                    <a href="login.html" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+                    <a href="<?php echo base_url();?>LoginControl/logout" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
 
                 </div>
             </nav>
@@ -51,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <img src="<?php echo base_url(); ?>assets/img/user.png" class="img-thumbnail" />
 
                                 <div class="inner-text">
-                                    Jhon Deo Alex
+                                    <?php echo $this->session->userdata('nama');?>
                                     <br />
                                     <small>Last Login : 2 Weeks Ago </small>
                                 </div>
