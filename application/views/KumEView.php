@@ -21,14 +21,6 @@
                     		echo $row->jenis_kegiatan;
                     		echo '</option>';                    		
                     	}
-                        
-                        /* OBSOLETE: sekarang menggunakan Kegiatan table (Laatansa)
-                        $i = 1;
-                        foreach ($kum_e as $row) {
-                            ?>
-                            <option value="<?php echo $i; ?>">E.<?php echo $i++ . ".&nbsp;" . $row; ?></option>
-                        <?php } 
-                        */
                     ?>
                     </select>
                 </div>
