@@ -14,12 +14,21 @@
                     <?php } ?>
                     <label>Kegiatan</label>
                     <select class="form-control" id="radio" onclick="selectFormKumE();">
-                        <?php
+                    <?php
+                    	$i = 1;
+                    	foreach ($kum_e as $row){
+                    		echo '<option value="'.$i++.'">';
+                    		echo '</option>';                    		
+                    	}
+                        
+                        /* OBSOLETE: sekarang menggunakan Kegiatan table (Laatansa)
                         $i = 1;
                         foreach ($kum_e as $row) {
                             ?>
                             <option value="<?php echo $i; ?>">E.<?php echo $i++ . ".&nbsp;" . $row; ?></option>
-                        <?php } ?>
+                        <?php } 
+                        */
+                    ?>
                     </select>
                 </div>
                 <div id="komponen_kegiatan"/>

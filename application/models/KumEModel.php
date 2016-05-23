@@ -11,6 +11,10 @@ class KumEModel extends CI_Model {
     }
 
     public function getTitleArray() {
+    	$this->db->from('kegiatan');
+    	$query = $this->db->get();
+		return $query->result();
+    	/* OBSOLETE: sekarang menggunakan Kegiatan table (Laatansa)
         $titleArray = array(
             'Menjadi anggota dalam suatu Panitia/ Badan pada perguruan Tinggi',
             'Menjadi anggota panitia/ badan pada lembaga pemerintah',
@@ -24,7 +28,7 @@ class KumEModel extends CI_Model {
             'Mempunyai prestasi dibidang olahraga/ Humaniora',
             'Keanggotaan dalam tim penilai jabatan akademik dosen (tiap semester)'
         );
-        return $titleArray;
+        return $titleArray;*/
     }
 
     public function get_autoComplete($search_data) {
@@ -34,7 +38,6 @@ class KumEModel extends CI_Model {
     }
 
     public function get_komponenKegiatan($id) {
-        $this->db->select('*');
         $this->db->where('no', $id);
         return $this->db->get('kum_e');
     }
