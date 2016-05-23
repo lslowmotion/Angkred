@@ -24,7 +24,7 @@ class LoginControl extends CI_Controller {
         $nip = $this->input->post('nip');
         $password = md5($this->input->post('password'));
         if ($this->DosenModel->validasiDosen($nip, $password)) {
-            redirect('/KumEControl/');
+            redirect('/DashboardControl/');
         } else {
             redirect('/LoginControl/');
         };

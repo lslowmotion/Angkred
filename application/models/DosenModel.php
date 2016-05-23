@@ -19,6 +19,7 @@ class DosenModel extends CI_Model {
         $data = $query->row();
         if($query->num_rows()>0){
             $user_data = array(
+                'nip' => $nip,
                 'is_login' => true,
                 'nama' => $data->nama
             );

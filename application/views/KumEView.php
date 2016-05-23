@@ -5,15 +5,21 @@
         <!--Wizard-->
         <!-- /. ROW  -->
         <div class="row">
-            <div class="col-md-12">                     
+            <div class="col-md-12">        
                 <div class="form-group">
+                    <?php if (isset($notify)) { ?>
+                        <div class="alert alert-success">
+                            <?php echo $notify;?>
+                        </div>
+                    <?php } ?>
                     <label>Kegiatan</label>
                     <select class="form-control" id="radio" onclick="selectFormKumE();">
                         <?php
                         $i = 1;
-                        foreach($kum_e as $row){?>
-                        <option value="<?php echo $i;?>">E.<?php echo $i++.".&nbsp;".$row;?></option>
-                        <?php }?>
+                        foreach ($kum_e as $row) {
+                            ?>
+                            <option value="<?php echo $i; ?>">E.<?php echo $i++ . ".&nbsp;" . $row; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div id="komponen_kegiatan"/>

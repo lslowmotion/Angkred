@@ -33,14 +33,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Angkred</a>
+                    <a class="navbar-brand" href="<?php echo base_url();?>DashboardControl/">Angkred</a>
                 </div>
 
                 <div class="header-right">
 
                     <a href="message-task.html" class="btn btn-info" title="New Message"><b>30 </b><i class="fa fa-envelope-o fa-2x"></i></a>
                     <a href="message-task.html" class="btn btn-primary" title="New Task"><b>40 </b><i class="fa fa-bars fa-2x"></i></a>
-                    <a href="<?php echo base_url();?>LoginControl/logout" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
+                    <a href="<?php echo base_url(); ?>LoginControl/logout" class="btn btn-danger" title="Logout"><i class="fa fa-exclamation-circle fa-2x"></i></a>
 
                 </div>
             </nav>
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <img src="<?php echo base_url(); ?>assets/img/user.png" class="img-thumbnail" />
 
                                 <div class="inner-text">
-                                    <?php echo $this->session->userdata('nama');?>
+                                    <?php echo $this->session->userdata('nama'); ?>
                                     <br />
                                     <small>Last Login : 2 Weeks Ago </small>
                                 </div>
