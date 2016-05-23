@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label>Tanggal</label>
                     <div class="date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                        <input class="form-control datepicker"  data-date-format="yyyy-mm-dd" type="text" name="tanggal" style="width:150px" >
+                        <input class="form-control datepicker"  data-date-format="yyyy-mm-dd" type="date" name="tanggal" style="width:170px" >
                     </div>
                     <input type="hidden" id="dtp_input2" value=""/>
                 </div>
