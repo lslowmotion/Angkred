@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2016 at 08:36 PM
+-- Generation Time: May 23, 2016 at 09:21 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -57,6 +57,8 @@ CREATE TABLE `kegiatan` (
 
 INSERT INTO `kegiatan` (`id_kegiatan`, `jenis_kegiatan`) VALUES
 ('E.1.', 'Menjadi anggota dalam suatu Panitia/ Badan pada perguruan Tinggi'),
+('E.10.', 'Mempunyai prestasi dibidang olahraga/ Humaniora'),
+('E.11.', 'Keanggotaan dalam tim penilai jabatan akademik dosen (tiap semester)'),
 ('E.2.', 'Menjadi anggota panitia/ badan pada lembaga pemerintah'),
 ('E.3.', 'Menjadi anggota organisasi profesi'),
 ('E.4.', 'Mewakili Perguruan Tinggi/ Lembaga Pemerintah duduk dalam Panitia Antar Lembaga, tiap kepanitiaan'),
@@ -64,9 +66,7 @@ INSERT INTO `kegiatan` (`id_kegiatan`, `jenis_kegiatan`) VALUES
 ('E.6.', 'Berperan serta aktif dalam pengelolaan jurnal ilmiah (pertahun)'),
 ('E.7.', 'Berperan serta aktif dalam pertemuan ilmiah'),
 ('E.8.', 'Mendapatkan tanda jasa/ penghargaan'),
-('E.9.', 'Menulis buku pelajaran SLTA ke bawah yang diterbitkan dan diedarkan secara nasional'),
-('E.10.', 'Mempunyai prestasi dibidang olahraga/ Humaniora'),
-('E.11.', 'Keanggotaan dalam tim penilai jabatan akademik dosen (tiap semester)');
+('E.9.', 'Menulis buku pelajaran SLTA ke bawah yang diterbitkan dan diedarkan secara nasional');
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ INSERT INTO `kegiatan` (`id_kegiatan`, `jenis_kegiatan`) VALUES
 
 CREATE TABLE `kum_e` (
   `id_kum` varchar(7) NOT NULL,
-  `no` int(2) NOT NULL DEFAULT '0',
+  `id_kegiatan` varchar(8) NOT NULL,
   `komponen_kegiatan` varchar(200) DEFAULT NULL,
   `angka_kredit` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -85,41 +85,41 @@ CREATE TABLE `kum_e` (
 -- Dumping data for table `kum_e`
 --
 
-INSERT INTO `kum_e` (`id_kum`, `no`, `komponen_kegiatan`, `angka_kredit`) VALUES
-('E.1.A', 1, 'Sebagai Ketua/ Wakil ketua merangkap anggota, tiap tahun.', 3),
-('E.1.B', 1, 'Sebagai Anggota, tiap tahun', 2),
-('E.10.A', 10, 'Tingkat Internasional, tiap piagam/ medali', 5),
-('E.10.B', 10, 'Tingkat Nasional, tiap piagam/ medali', 3),
-('E.10.C', 10, 'Tingkat Daerah/Lokal, tiap piagam/ medali', 1),
-('E.11', 11, 'Keanggotaan dalam tim penilai jabatan akademik dosen (tiap semester)', 0.5),
-('E.2.A.1', 2, 'Panitia Pusat, sebagai Ketua/ Wakil Ketua, tiap kepanitiaan', 3),
-('E.2.A.2', 2, 'Panitia Pusat, sebagai Anggota, tiap kepanitiaan', 2),
-('E.2.B.1', 2, 'Panitia Daerah, sebagai Ketua/ Wakil Ketua, tiap kepanitiaan', 2),
-('E.2.B.2', 2, 'Panitia Daerah, sebagai Anggota, tiap kepanitiaan', 1),
-('E.3.A.1', 3, 'Tingkat Internasional, sebagai Pengurus tiap periode jabatan', 2),
-('E.3.A.2', 3, 'Tingkat Internasional, sebagai Anggota atas permintaan, tiap periode jabatan', 1),
-('E.3.A.3', 3, 'Tingkat Internasional, sebagai Anggota, tiap periode jabatan', 0.5),
-('E.3.B.1', 3, 'Tingkat Nasional, sebagai Pengurus, tiap periode jabatan', 1.5),
-('E.3.B.2', 3, 'Tingkat Nasional, sebagai Anggota atas permintaan, tiap periode jabatan', 1),
-('E.3.B.3', 3, 'Tingkat Nasional, sebagai Anggota, tiap periode jabatan', 0.5),
-('E.4', 4, 'Mewakili Perguruan Tinggi/Lembaga Pemerintah duduk dalam Panitia Antar Lembaga, tiap kepanitiaan', 1),
-('E.5.A', 5, 'Sebagai Ketua delegasi, tiap kegiatan', 3),
-('E.5.B', 5, 'Sebagai Anggota, tiap kegiatan', 2),
-('E.6.A', 6, 'Editor/dewan penyunting/dewan redaksi jurnal ilmiah internasional', 4),
-('E.6.B', 6, 'Editor/dewan penyunting/dewan redaksi jurnal ilmiah nasional', 2),
-('E.7.A.1', 7, 'Tingkat Internasional/ Nasional/ Regional sebagai Ketua, tiap kegiatan', 3),
-('E.7.A.2', 7, 'Tingkat Internasional/ Nasional/ Regional sebagai Anggota/ peserta, tiap kegiatan', 2),
-('E.7.B.1', 7, 'Di lingkungan Perguruan Tinggi sebagai Ketua, tiap kegiatan', 2),
-('E.7.B.2', 7, 'Di lingkungan Perguruan Tinggi sebagai Anggota/ peserta, tiap kegiatan', 1),
-('E.8.A', 8, 'Penghargaan/ tanda jasa Satya lencana 30 tahun', 3),
-('E.8.B', 8, 'Penghargaan/ tanda jasa Satya lencana 20 tahun', 2),
-('E.8.C', 8, 'Penghargaan/ tanda jasa Satya lencana 10 tahun', 1),
-('E.8.D', 8, 'Tingkat Internasional, tiap tanda jasa/ penghargaan', 5),
-('E.8.E', 8, 'Tingkat Nasional, tiap tanda jasa/ penghargaan', 3),
-('E.8.F', 8, 'Tingkat Daerah/Lokal, tiap tanda jasa/ penghargaan', 1),
-('E.9.A', 9, 'Buku SMTA atau setingkat, tiap buku', 5),
-('E.9.B', 9, 'Buku SMTP atau setingkat, tiap buku', 5),
-('E.9.C', 9, 'Buku SD atau setingkat, tiap buku', 5);
+INSERT INTO `kum_e` (`id_kum`, `id_kegiatan`, `komponen_kegiatan`, `angka_kredit`) VALUES
+('E.1.A', 'E.1.', 'Sebagai Ketua/ Wakil ketua merangkap anggota, tiap tahun.', 3),
+('E.1.B', 'E.1.', 'Sebagai Anggota, tiap tahun', 2),
+('E.10.A', 'E.10.', 'Tingkat Internasional, tiap piagam/ medali', 5),
+('E.10.B', 'E.10.', 'Tingkat Nasional, tiap piagam/ medali', 3),
+('E.10.C', 'E.10.', 'Tingkat Daerah/Lokal, tiap piagam/ medali', 1),
+('E.11', 'E.11.', 'Keanggotaan dalam tim penilai jabatan akademik dosen (tiap semester)', 0.5),
+('E.2.A.1', 'E.2.', 'Panitia Pusat, sebagai Ketua/ Wakil Ketua, tiap kepanitiaan', 3),
+('E.2.A.2', 'E.2.', 'Panitia Pusat, sebagai Anggota, tiap kepanitiaan', 2),
+('E.2.B.1', 'E.2.', 'Panitia Daerah, sebagai Ketua/ Wakil Ketua, tiap kepanitiaan', 2),
+('E.2.B.2', 'E.2.', 'Panitia Daerah, sebagai Anggota, tiap kepanitiaan', 1),
+('E.3.A.1', 'E.3.', 'Tingkat Internasional, sebagai Pengurus tiap periode jabatan', 2),
+('E.3.A.2', 'E.3.', 'Tingkat Internasional, sebagai Anggota atas permintaan, tiap periode jabatan', 1),
+('E.3.A.3', 'E.3.', 'Tingkat Internasional, sebagai Anggota, tiap periode jabatan', 0.5),
+('E.3.B.1', 'E.3.', 'Tingkat Nasional, sebagai Pengurus, tiap periode jabatan', 1.5),
+('E.3.B.2', 'E.3.', 'Tingkat Nasional, sebagai Anggota atas permintaan, tiap periode jabatan', 1),
+('E.3.B.3', 'E.3.', 'Tingkat Nasional, sebagai Anggota, tiap periode jabatan', 0.5),
+('E.4', 'E.4.', 'Mewakili Perguruan Tinggi/Lembaga Pemerintah duduk dalam Panitia Antar Lembaga, tiap kepanitiaan', 1),
+('E.5.A', 'E.5.', 'Sebagai Ketua delegasi, tiap kegiatan', 3),
+('E.5.B', 'E.5.', 'Sebagai Anggota, tiap kegiatan', 2),
+('E.6.A', 'E.6.', 'Editor/dewan penyunting/dewan redaksi jurnal ilmiah internasional', 4),
+('E.6.B', 'E.6.', 'Editor/dewan penyunting/dewan redaksi jurnal ilmiah nasional', 2),
+('E.7.A.1', 'E.7.', 'Tingkat Internasional/ Nasional/ Regional sebagai Ketua, tiap kegiatan', 3),
+('E.7.A.2', 'E.7.', 'Tingkat Internasional/ Nasional/ Regional sebagai Anggota/ peserta, tiap kegiatan', 2),
+('E.7.B.1', 'E.7.', 'Di lingkungan Perguruan Tinggi sebagai Ketua, tiap kegiatan', 2),
+('E.7.B.2', 'E.7.', 'Di lingkungan Perguruan Tinggi sebagai Anggota/ peserta, tiap kegiatan', 1),
+('E.8.A', 'E.8.', 'Penghargaan/ tanda jasa Satya lencana 30 tahun', 3),
+('E.8.B', 'E.8.', 'Penghargaan/ tanda jasa Satya lencana 20 tahun', 2),
+('E.8.C', 'E.8.', 'Penghargaan/ tanda jasa Satya lencana 10 tahun', 1),
+('E.8.D', 'E.8.', 'Tingkat Internasional, tiap tanda jasa/ penghargaan', 5),
+('E.8.E', 'E.8.', 'Tingkat Nasional, tiap tanda jasa/ penghargaan', 3),
+('E.8.F', 'E.8.', 'Tingkat Daerah/Lokal, tiap tanda jasa/ penghargaan', 1),
+('E.9.A', 'E.9.', 'Buku SMTA atau setingkat, tiap buku', 5),
+('E.9.B', 'E.9.', 'Buku SMTP atau setingkat, tiap buku', 5),
+('E.9.C', 'E.9.', 'Buku SD atau setingkat, tiap buku', 5);
 
 -- --------------------------------------------------------
 
@@ -174,10 +174,17 @@ ALTER TABLE `dosen`
   ADD PRIMARY KEY (`nip`);
 
 --
+-- Indexes for table `kegiatan`
+--
+ALTER TABLE `kegiatan`
+  ADD PRIMARY KEY (`id_kegiatan`);
+
+--
 -- Indexes for table `kum_e`
 --
 ALTER TABLE `kum_e`
-  ADD PRIMARY KEY (`id_kum`);
+  ADD PRIMARY KEY (`id_kum`),
+  ADD KEY `id_kegiatan` (`id_kegiatan`);
 
 --
 -- Indexes for table `pengambilan_kume`
@@ -194,6 +201,16 @@ ALTER TABLE `pengambilan_kume`
 --
 ALTER TABLE `pengambilan_kume`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `kum_e`
+--
+ALTER TABLE `kum_e`
+  ADD CONSTRAINT `kum_e_ibfk_1` FOREIGN KEY (`id_kegiatan`) REFERENCES `kegiatan` (`id_kegiatan`) ON UPDATE NO ACTION;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

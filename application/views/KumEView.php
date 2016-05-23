@@ -15,9 +15,8 @@
                     <label>Kegiatan</label>
                     <select class="form-control" id="radio" onclick="selectFormKumE();">
                     <?php
-                    	$i = 1;
                     	foreach ($kum_e as $row){
-                    		echo '<option value="'.$i++.'">';
+                    		echo '<option value="'.$row->id_kegiatan.'">';
                     		echo $row->id_kegiatan.'&nbsp';
                     		echo $row->jenis_kegiatan;
                     		echo '</option>';                    		
