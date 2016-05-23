@@ -18,6 +18,8 @@
                     	$i = 1;
                     	foreach ($kum_e as $row){
                     		echo '<option value="'.$i++.'">';
+                    		echo $row->id_kegiatan.'&nbsp';
+                    		echo $row->jenis_kegiatan;
                     		echo '</option>';                    		
                     	}
                         
