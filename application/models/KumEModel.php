@@ -38,5 +38,4 @@ class KumEModel extends CI_Model {
         $this->db->where('no', $id);
         return $this->db->get('kum_e');
     }
-
 }
