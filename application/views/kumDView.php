@@ -115,7 +115,7 @@
 
                          
             $.ajax({
-                url:"../angkred/kumDControl/get_detail?id="+id_komponen,              
+                url:"../dKumDControl/get_detail?id="+id_komponen,              
                 dataType : "json",
                 type: "POST",
 
@@ -141,7 +141,7 @@
                   id_subkomponen = $( this ).val();
                 });
          $.ajax({
-                url:"../angkred/kumDControl/get_detail?id="+id_subkomponen,              
+                url:"../KumDControl/get_detail?id="+id_subkomponen,              
                 dataType : "json",
                 type: "POST",
 
@@ -167,7 +167,7 @@
                   id_subkomponen = $( this ).val();
                 });
          $.ajax({
-                url:"../angkred/kumDControl/get_detail?id="+id_subkomponen,              
+                url:"../KumDControl/get_detail?id="+id_subkomponen,              
                 dataType : "json",
                 type: "POST",
 
@@ -192,7 +192,7 @@
                   id_subkomponen = $( this ).val();
                 });
          $.ajax({
-                url:"../angkred/kumDControl/get_detail?id="+id_subkomponen,              
+                url:"../KumDControl/get_detail?id="+id_subkomponen,              
                 dataType : "json",
                 type: "POST",
 
@@ -223,13 +223,13 @@
                     + '&jum_angkre=' + document.getElementById("jum_angkre").value ;
       
               $.ajax({
-                url:"../angkred/KumDControl/tambahKumD",              
+                url:"../KumDControl/tambahKumD",              
                 dataType : "json",
                 data : subkom,
                 type: "POST",
                 //success: success()       
               }); 
-            // window.alert("sub_komponen");
+            window.alert("Penambahan Sukses");
         }else {
             // window.alert("komponen");
         }

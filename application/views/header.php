@@ -22,6 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script type="text/javascript">
             var base_url = "<?php echo base_url(); ?>";
         </script>
+        <!-- JQUERY SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.js"></script>
     </head>
     <body>
         <div id="wrapper">
