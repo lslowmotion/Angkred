@@ -24,7 +24,8 @@ class KumEControl extends CI_Controller {
 
     public function showKomponenKegiatan() {
         $id = $this->input->post('id');
-        $data['kum_e'] = $this->KumEModel->get_komponenKegiatan($id);
+        $query = $this->KumEModel->get_komponenKegiatan($id);
+        $data['kum_e'] = $query->result();
         $this->load->view('KumE_Komponen_Kegiatan', $data);
     }
 

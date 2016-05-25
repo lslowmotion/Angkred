@@ -60,8 +60,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </li>
                         <li>
-                            <a class="active-menu" href="<?php echo base_url(); ?>KumEControl/"><i class="fa fa-dashboard "></i>Kegiatan Unsur Penunjang</a>
-							<a class="" href="<?php echo base_url(); ?>KumBControl/"><i class="fa fa-graduation-cap"></i>Pendidikan</a>
+                            <a class="" href="<?php echo base_url(); ?>KumBControl/"><i class="fa fa-graduation-cap"></i>Pendidikan</a>
+							<a class="" href="<?php echo base_url(); ?>KumCControl/"><i class="fa fa-graduation-cap"></i>Penelitian</a>
+							<a class="" href="<?php echo base_url(); ?>KumDControl/"><i class="fa fa-graduation-cap"></i>Pengabdian</a>
+							<a class="active-menu" href="<?php echo base_url(); ?>KumEControl/"><i class="fa fa-dashboard "></i>Kegiatan Unsur Penunjang</a>
                         </li>
                     </ul>
                 </div>
