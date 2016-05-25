@@ -1,0 +1,4 @@
+24052016
+Penambahan tabel kegiatan -Laatansa
+Penambahan relationship tabel kum_e dan tabel kegiatan -Laatansa
+Pembenahan tabel kum_e agar bisa bekerjasama dengan tabel kegiatan -Laatansa

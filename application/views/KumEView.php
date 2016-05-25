@@ -14,12 +14,14 @@
                     <?php } ?>
                     <label>Kegiatan</label>
                     <select class="form-control" id="radio" onclick="selectFormKumE();">
-                        <?php
-                        $i = 1;
-                        foreach ($kum_e as $row) {
-                            ?>
-                            <option value="<?php echo $i; ?>">E.<?php echo $i++ . ".&nbsp;" . $row; ?></option>
-                        <?php } ?>
+                    <?php
+                    	foreach ($kum_e as $row){
+                    		echo '<option value="'.$row->id_kegiatan.'">';
+                    		echo $row->id_kegiatan.'&nbsp';
+                    		echo $row->jenis_kegiatan;
+                    		echo '</option>';                    		
+                    	}
+                    ?>
                     </select>
                 </div>
                 <div id="komponen_kegiatan"/>
