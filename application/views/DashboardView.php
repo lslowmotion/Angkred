@@ -22,6 +22,7 @@
                                         <th>Angka Kredit</th>
                                         <th>Jumlah Angka Kredit</th>
                                         <th>Keterangan Bukti Fisik</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,7 +39,9 @@
                                         <td><?php echo $row->angka_kredit?></td>
                                         <td><?php echo $row->volume_kegiatan*$row->angka_kredit;?></td>
                                         <td><?php echo $row->file_bukti?></td>
-
+                                        <td>
+                                            
+                                        </td>
                                     </tr>
                                     <?php }?>
                                 </tbody>
