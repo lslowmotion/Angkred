@@ -23,6 +23,8 @@
                     </select>
                 </div>
                 <div id="komponen_kegiatan"/>
+                <a href="<?php echo base_url();?>KumEControl/showKumE" type="button" class="btn btn-warning lihatkumd">Lihat</a>
+                    
             </div>
         </div>
     </div>
