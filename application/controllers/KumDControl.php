@@ -22,9 +22,6 @@ class kumDControl extends CI_Controller {
         $id = $_GET['id'];
         $query = $this->KumDModel->detail($id);
         echo json_encode($query);
-        // $query = $this->db->query('SELECT * FROM kum_d_kredit');
-
-        // print_r($query[0]['satuan_hasil']);
     }
 
     public function tambahKumD(){
@@ -38,15 +35,12 @@ class kumDControl extends CI_Controller {
                 'jumlah_angkakredit' => $_POST['jum_angkre'],
             );
         $query = $this->KumDModel->tambahKumD($data);
-        // echo $_POST['uraian_kegiatan'];
     }
 
     public function lihatKumD(){
         $data = array(
                 'kumd' => $this->KumDModel->lihatKumD(),
             );
-        // $datac = $this->KumDModel->lihatKumD();
-        // print_r($data);
         $this->load->view('kumDViewAll', $data);
     }
 
