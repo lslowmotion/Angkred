@@ -17,14 +17,6 @@ class kumDControl extends CI_Controller {
       
         $this->load->view('KumDView');
     }
-    
-    // public function showKomponenKegiatan() {
-    //     $id = $this->input->post('id');
-    //     $query = $this->KumEModel->get_komponenKegiatan($id);
-    //     $data['kum_e'] = $query->result();
-    //     $this->load->view('KumE_Komponen_Kegiatan',$data);
-    //     $this->load->view('KumD_Komponen_Kegiatan');
-    // }
 
     public function get_detail(){
         $id = $_GET['id'];
