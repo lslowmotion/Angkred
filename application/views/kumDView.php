@@ -115,7 +115,7 @@
 
                          
             $.ajax({
-                url:"../dKumDControl/get_detail?id="+id_komponen,              
+                url:"../KumDControl/get_detail?id="+id_komponen,              
                 dataType : "json",
                 type: "POST",
 
