@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label>Jumlah Kegiatan</label>
-                    <input type="text" class="form-control" name="jumkeg" id="jumkeg" disabled>
+                    <input type="text" class="form-control" name="jumkeg" id="jumkeg" class="jumkeg">
                 </div>
                 <div class="form-group">
                     <label>Angka Kredit</label>
@@ -122,8 +122,8 @@
                 success: function(data){
                   document.getElementById("sathas").value = data[0].satuan_hasil;
                   document.getElementById("angkre").value = data[0].kredit;
-                  document.getElementById("jumkeg").value = 1;
-                   document.getElementById("jum_angkre").value = data[0].kredit;
+                  document.getElementById("jumkeg").value = 0;
+                  document.getElementById("jum_angkre").value = document.getElementById("jumkeg").value * data[0].kredit;
                   // document.getElementById("community1").value = data[0].community;
                   // document.getElementById("lokasi1").value = data[0].lokasi;
                   // document.getElementById("os1").value = data[0].os;
@@ -131,7 +131,7 @@
                }
               });  
         }
-        window.alert(id_komponen);
+        // window.alert(id_komponen);
 
     }
 
@@ -148,8 +148,8 @@
                 success: function(data){
                   document.getElementById("sathas").value = data[0].satuan_hasil;
                   document.getElementById("angkre").value = data[0].kredit;
-                  document.getElementById("jumkeg").value = 1;
-                   document.getElementById("jum_angkre").value = data[0].kredit;
+                  document.getElementById("jumkeg").value = 0;
+                  document.getElementById("jum_angkre").value = document.getElementById("jumkeg").value * data[0].kredit;
                   // document.getElementById("community1").value = data[0].community;
                   // document.getElementById("lokasi1").value = data[0].lokasi;
                   // document.getElementById("os1").value = data[0].os;
@@ -157,7 +157,7 @@
                }
               });  
 
-        window.alert(id_subkomponen);
+        // window.alert(id_subkomponen);
 
     }
 
@@ -174,15 +174,15 @@
                 success: function(data){
                   document.getElementById("sathas").value = data[0].satuan_hasil;
                   document.getElementById("angkre").value = data[0].kredit;
-                  document.getElementById("jumkeg").value = 1;
-                   document.getElementById("jum_angkre").value = data[0].kredit;
+                  document.getElementById("jumkeg").value = 0;
+                  document.getElementById("jum_angkre").value = document.getElementById("jumkeg").value * data[0].kredit;
                   // document.getElementById("community1").value = data[0].community;
                   // document.getElementById("lokasi1").value = data[0].lokasi;
                   // document.getElementById("os1").value = data[0].os;
                   //document.form_ganti_kat.action = "../operation/ganti_kategori?id="+id;   
                }
               }); 
-        window.alert(id_subkomponen);
+        // window.alert(id_subkomponen);
 
     }
 
@@ -199,15 +199,15 @@
                 success: function(data){
                   document.getElementById("sathas").value = data[0].satuan_hasil;
                   document.getElementById("angkre").value = data[0].kredit;
-                  document.getElementById("jumkeg").value = 1;
-                   document.getElementById("jum_angkre").value = data[0].kredit;
+                  document.getElementById("jumkeg").value = 0;
+                  document.getElementById("jum_angkre").value = document.getElementById("jumkeg").value * data[0].kredit;
                   // document.getElementById("community1").value = data[0].community;
                   // document.getElementById("lokasi1").value = data[0].lokasi;
                   // document.getElementById("os1").value = data[0].os;
                   //document.form_ganti_kat.action = "../operation/ganti_kategori?id="+id;   
                }
               }); 
-        window.alert(id_subkomponen);
+        // window.alert(id_subkomponen);
     }
 
 
@@ -235,6 +235,13 @@
         }
 
                              
+    });
+
+    $("#jumkeg").change(function(){
+      jumkeg = document.getElementById("jumkeg").value;
+      angkre = document.getElementById("angkre").value;
+      document.getElementById("jum_angkre").value =  jumkeg * angkre; 
+
     });
 </script>
 <!-- /. PAGE WRAPPER  -->
