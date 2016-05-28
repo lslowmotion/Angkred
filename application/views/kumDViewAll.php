@@ -40,3 +40,13 @@
 <!-- /. PAGE WRAPPER  -->
 
 <?php $this->load->view('footer'); ?>
+
+
+
+ <script>
+    $( document ).ready(function() {
+
+         $('#kumdtable').DataTable();
+       
+    });
+</script>

@@ -89,6 +89,8 @@
         document.getElementById(3).style.display='none';
         document.getElementById(7).style.display='none';
         document.getElementById(12).style.display='none';
+
+       
     });
     
     function selectFormKumD(){
@@ -232,6 +234,22 @@
             window.alert("Penambahan Sukses");
         }else {
             // window.alert("komponen");
+            var subkom = 'id_kredit=' + document.getElementById("komponen").value 
+                    + '&uraian_kegiatan=' + document.getElementById("uraian").value
+                    + '&tanggal=' + document.getElementById("tanggal").value
+                    + '&sathas=' + document.getElementById("sathas").value 
+                    + '&jumkeg=' + document.getElementById("jumkeg").value 
+                    + '&angkre=' + document.getElementById("angkre").value 
+                    + '&jum_angkre=' + document.getElementById("jum_angkre").value ;
+      
+              $.ajax({
+                url:"../KumDControl/tambahKumD",              
+                dataType : "json",
+                data : subkom,
+                type: "POST",
+                //success: success()       
+              }); 
+            window.alert("Penambahan Sukses");
         }
 
                              
